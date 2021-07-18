@@ -1,0 +1,194 @@
+@import "./_variable.scss";
+.signup {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(252, 243, 226);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .width {
+    margin: auto;
+    position: relative;
+    width: 90%;
+    height: 90vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .side {
+      color: #fff;
+      width: 65%;
+      position: relative;
+      height: 100%;
+      //   background-color: $theme;
+      background: url("../imgs/green-chameleon-s9CC2SKySJM-unsplash.jpg");
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      & .modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($theme, 0.85);
+      }
+
+      & .title {
+        position: inherit;
+        height: 20%;
+        width: 100%;
+        & .txt {
+          background-color: rgba(#bbb, 0.2);
+          position: inherit;
+          width: 18%;
+          height: auto;
+          margin-left: 1rem;
+          margin-top: 1rem;
+          & a {
+            text-decoration: none;
+            color: #fff;
+            & h1 {
+              font-size: 2.5rem;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+
+      & .txt {
+        position: inherit;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1.3rem;
+        & h1 {
+          text-transform: capitalize;
+          font-size: 2.5rem;
+          font-family: "Poppins-Light";
+        }
+      }
+    }
+
+    & .form {
+      position: relative;
+      width: 35%;
+      height: 100%;
+      & .signin {
+        position: relative;
+        width: 100%;
+        height: 12%;
+        & .righ {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 2rem;
+          & h1 {
+            font-family: "Rubik-Light";
+            font-size: 1.9rem;
+            text-transform: capitalize;
+          }
+          & a {
+            position: relative;
+            width: 8.4rem;
+            height: 3.4rem;
+            margin-left: 3rem;
+            & button {
+              cursor: pointer;
+              position: relative;
+              width: 100%;
+              height: 100%;
+              font-family: "Rubik-Light";
+              font-size: 1.7rem;
+              text-transform: capitalize;
+              background-color: transparent;
+              border-radius: 0.3rem;
+              border: 2px solid $theme;
+              color: $theme;
+            }
+          }
+        }
+      }
+
+      & form {
+        position: relative;
+        width: 100%;
+        height: 88%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .item {
+          position: inherit;
+          width: 65%;
+          height: 60%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          & .error {
+            position: relative;
+            width: 100%;
+            padding: 0.4rem;
+            border: 2px solid red;
+            color: rgb(255, 73, 73);
+            font-family: "Rubik-Light";
+            font-size: 0.85rem;
+            text-transform: capitalize;
+            display: inline-block;
+            text-align: center;
+          }
+
+          & input {
+            width: 100%;
+            position: inherit;
+            height: 4rem;
+            border: none;
+            outline: none;
+            margin-bottom: 2rem;
+            border-bottom: 0.2rem solid rgba(#000, 0.5);
+            font-family: "Rubik-Light";
+            font-size: 1.4rem;
+            color: #000;
+            text-indent: 4px;
+            text-transform: capitalize;
+            &:hover,
+            &:focus {
+              border: 2px solid $theme;
+            }
+          }
+
+          & .btn {
+            position: inherit;
+            width: 100%;
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & button {
+              position: relative;
+              width: 65%;
+              height: 100%;
+              font-family: "Rubik-Light";
+              font-size: 1.7rem;
+              color: #fff;
+              background-color: $theme;
+              text-transform: capitalize;
+              border: none;
+              cursor: pointer;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

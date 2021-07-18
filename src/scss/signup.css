@@ -1,0 +1,257 @@
+.signup {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #fcf3e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup .width {
+  margin: auto;
+  position: relative;
+  width: 90%;
+  height: 90vh;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup .width .side {
+  color: #fff;
+  width: 65%;
+  position: relative;
+  height: 100%;
+  background: url("../imgs/green-chameleon-s9CC2SKySJM-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.signup .width .side .modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 41, 62, 0.85);
+}
+
+.signup .width .side .title {
+  position: inherit;
+  height: 20%;
+  width: 100%;
+}
+
+.signup .width .side .title .txt {
+  background-color: rgba(187, 187, 187, 0.2);
+  position: inherit;
+  width: 18%;
+  height: auto;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.signup .width .side .title .txt a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.signup .width .side .title .txt a h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.signup .width .side .txt {
+  position: inherit;
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1.3rem;
+}
+
+.signup .width .side .txt h1 {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  font-family: "Poppins-Light";
+}
+
+.signup .width .form {
+  position: relative;
+  width: 35%;
+  height: 100%;
+}
+
+.signup .width .form .signin {
+  position: relative;
+  width: 100%;
+  height: 12%;
+}
+
+.signup .width .form .signin .righ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+.signup .width .form .signin .righ h1 {
+  font-family: "Rubik-Light";
+  font-size: 1.9rem;
+  text-transform: capitalize;
+}
+
+.signup .width .form .signin .righ a {
+  position: relative;
+  width: 8.4rem;
+  height: 3.4rem;
+  margin-left: 3rem;
+}
+
+.signup .width .form .signin .righ a button {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: "Rubik-Light";
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  background-color: transparent;
+  border-radius: 0.3rem;
+  border: 2px solid #2b293e;
+  color: #2b293e;
+}
+
+.signup .width .form form {
+  position: relative;
+  width: 100%;
+  height: 88%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup .width .form form .item {
+  position: inherit;
+  width: 65%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup .width .form form .item .error {
+  position: relative;
+  width: 100%;
+  padding: 0.4rem;
+  border: 2px solid red;
+  color: #ff4949;
+  font-family: "Rubik-Light";
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  display: inline-block;
+  text-align: center;
+}
+
+.signup .width .form form .item input {
+  width: 100%;
+  position: inherit;
+  height: 4rem;
+  border: none;
+  outline: none;
+  margin-bottom: 2rem;
+  border-bottom: 0.2rem solid rgba(0, 0, 0, 0.5);
+  font-family: "Rubik-Light";
+  font-size: 1.4rem;
+  color: #000;
+  text-indent: 4px;
+  text-transform: capitalize;
+}
+
+.signup .width .form form .item input:hover, .signup .width .form form .item input:focus {
+  border: 2px solid #2b293e;
+}
+
+.signup .width .form form .item .btn {
+  position: inherit;
+  width: 100%;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup .width .form form .item .btn button {
+  position: relative;
+  width: 65%;
+  height: 100%;
+  font-family: "Rubik-Light";
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #2b293e;
+  text-transform: capitalize;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+/*# sourceMappingURL=signup.css.map */

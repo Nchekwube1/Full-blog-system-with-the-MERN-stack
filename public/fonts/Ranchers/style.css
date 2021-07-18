@@ -1,0 +1,13 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "Ranchers-Regular";
+  src: url("./fonts/Ranchers-Regular.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/Ranchers-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/Ranchers-Regular.otf") format("opentype"), /* Open Type Font */
+    url("./fonts/Ranchers-Regular.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/Ranchers-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/Ranchers-Regular.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/Ranchers-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}

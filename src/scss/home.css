@@ -1,0 +1,209 @@
+@-webkit-keyframes opac {
+  0% {
+    opacity: 1;
+    scale: 0;
+  }
+  50% {
+    opacity: 0.7;
+    scale: 0.8;
+  }
+  80% {
+    opacity: 0.7;
+    scale: 0.9;
+  }
+  100% {
+    opacity: 0;
+    scale: 1;
+  }
+}
+
+@keyframes opac {
+  0% {
+    opacity: 1;
+    scale: 0;
+  }
+  50% {
+    opacity: 0.7;
+    scale: 0.8;
+  }
+  80% {
+    opacity: 0.7;
+    scale: 0.9;
+  }
+  100% {
+    opacity: 0;
+    scale: 1;
+  }
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-size: 2rem;
+  background-image: url("../imgs/anete-lusina-zwsHjakE_iI-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.home .modal {
+  position: relative;
+  width: 80%;
+  height: 84%;
+  margin: auto;
+  top: 6%;
+  border-radius: 4rem;
+  padding: 3rem;
+  border: 1rem solid white;
+}
+
+.home .modal .txt {
+  position: relative;
+  width: 40%;
+  height: 80%;
+  text-align: center;
+  color: #fff;
+  font-family: "Rubik-Light";
+}
+
+.home .modal .txt h1 {
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-size: 5rem;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+.home .modal .txt h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+.home .modal .txt h3 {
+  font-size: 2rem;
+}
+
+.home .modal .btn {
+  position: relative;
+  width: 40%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .modal .btn .up {
+  position: inherit;
+  width: 50%;
+  height: 100%;
+}
+
+.home .modal .btn .up a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.home .modal .btn .up a button {
+  position: relative;
+  width: 65%;
+  height: 4.3rem;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: #fff;
+  font-family: "Courgette-Regular";
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 22;
+  text-transform: capitalize;
+}
+
+.home .modal .btn .up a button::before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  content: "";
+  background-color: #fff;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  z-index: -1;
+  opacity: 1;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.home .modal .btn .up a button:hover::before {
+  content: "";
+  content: "";
+  background-color: #fff;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  z-index: -1;
+  -webkit-transform: scaleX(1.3);
+          transform: scaleX(1.3);
+  -webkit-transform: scaleY(1.5);
+          transform: scaleY(1.5);
+  opacity: 0;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.home .modal .btn .in {
+  position: inherit;
+  width: 50%;
+  height: 100%;
+}
+
+.home .modal .btn .in a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.home .modal .btn .in a button {
+  position: relative;
+  width: 65%;
+  height: 4.3rem;
+  border-radius: 0.4rem;
+  border: 0.2rem solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-family: "Courgette-Regular";
+  cursor: pointer;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=home.css.map */
