@@ -4,6 +4,7 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 const Signup = require("./router/signup")
 const Signin = require("./router/signin")
+const User = require("./router/User")
 require("dotenv").config()
 
 
@@ -27,6 +28,7 @@ app.use(function (req, res, next) {
 });
 app.use("/", Signup)
 app.use("/", Signin)
+app.use("/", User)
 
 mongoose.connect("mongodb://localhost:27017/blogProfiles", {
     useCreateIndex: true,
