@@ -1,5 +1,5 @@
 @import "./variable";
-.body {
+.cont {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -11,13 +11,14 @@
     height: 100%;
     background-color: rgba($theme, 1);
     clip-path: polygon(0 0, 95% 0, 85% 100%, 0 100%);
-    .head {
+    & .head {
       position: relative;
       width: 100%;
       height: 10%;
       display: flex;
       justify-content: center;
       align-items: center;
+      color: #000;
 
       & a {
         cursor: pointer;

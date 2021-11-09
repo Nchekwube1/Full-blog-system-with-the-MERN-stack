@@ -1,9 +1,17 @@
 const express = require("express")
 const schema = require("../Model/model")
 const bcrypt = require("bcrypt")
+const app = express()
+require("dotenv").config()
+const parser = require("cookie-parser")
 const Router = express.Router()
-const cors = require("cors")
-express().use(cors())
+const jwt = require('jsonwebtoken')
+
+app.use(parser())
+
+
+const jwtSecret = process.env.jwtSecret
+
 
 Router.post("/signin", async (req, res) => {
 
@@ -20,7 +28,29 @@ Router.post("/signin", async (req, res) => {
                             return res.status(208).json({ message: "problem from bcrypt" })
                         }
                         if (result) {
-                            return res.status(200).json({ messaage: data })
+
+                            // data to encode in token
+                            const user = data[0]
+                            const { _id, username, date } = user
+
+                            jwt.sign({ id: _id }, jwtSecret, {
+                                expiresIn: 360000
+                            }, (err, token) => {
+                                if (err) {
+                                    throw err
+                                }
+                                return res.send({ token })
+                            })
+
+
+
+                            // create cookie
+                            // return res.cookie('the-blog-user', token,
+                            //     { httpOnly: true, maxAge: 3600, sameSite: "none", secure: true, path: "/" })
+                            //     .status(200)
+                            //     .json({ message: 'login successfull' })
+
+
                         }
                         else {
                             return res.status(208).json({ message: "problem from bcrypt" })

@@ -1,4 +1,4 @@
-.body {
+.cont {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -6,7 +6,7 @@
   padding: 2rem;
 }
 
-.body .login {
+.cont .login {
   position: relative;
   width: 100%;
   height: 100%;
@@ -15,7 +15,7 @@
           clip-path: polygon(0 0, 95% 0, 85% 100%, 0 100%);
 }
 
-.body .login .head {
+.cont .login .head {
   position: relative;
   width: 100%;
   height: 10%;
@@ -28,14 +28,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #000;
 }
 
-.body .login .head a {
+.cont .login .head a {
   cursor: pointer;
   text-decoration: none;
 }
 
-.body .login .head a h1 {
+.cont .login .head a h1 {
   display: block;
   margin-top: 2rem;
   text-align: center;
@@ -45,7 +46,7 @@
   color: #fff;
 }
 
-.body .login .pad {
+.cont .login .pad {
   position: absolute;
   width: 30%;
   height: 75%;
@@ -59,7 +60,7 @@
   border-radius: 0.4rem;
 }
 
-.body .login .pad .error {
+.cont .login .pad .error {
   position: relative;
   width: 90%;
   padding: 1rem;
@@ -70,13 +71,13 @@
   margin-top: 0.5rem;
 }
 
-.body .login .pad .error h1 {
+.cont .login .pad .error h1 {
   text-transform: capitalize;
   font-size: 1.5rem;
   font-family: "Poppins-Light";
 }
 
-.body .login .pad form {
+.cont .login .pad form {
   position: relative;
   width: 100%;
   height: 60%;
@@ -93,7 +94,7 @@
   padding: 4rem;
 }
 
-.body .login .pad form input {
+.cont .login .pad form input {
   position: relative;
   width: 90%;
   height: 4.5rem;
@@ -107,11 +108,11 @@
   font-family: "Poppins-Light";
 }
 
-.body .login .pad form input:hover, .body .login .pad form input:focus {
+.cont .login .pad form input:hover, .cont .login .pad form input:focus {
   border: 2px solid #2b293e;
 }
 
-.body .login .pad form button {
+.cont .login .pad form button {
   position: relative;
   width: 70%;
   height: 4rem;
@@ -125,18 +126,18 @@
   margin-top: 4rem;
 }
 
-.body .login .pad form button:hover {
+.cont .login .pad form button:hover {
   background-color: #2b293e;
   color: #fff;
 }
 
-.body .login .pad .sup {
+.cont .login .pad .sup {
   position: relative;
   width: 100%;
   height: 30%;
 }
 
-.body .login .pad .sup h4 {
+.cont .login .pad .sup h4 {
   font-family: cursive;
   font-size: 1.8rem;
   text-transform: capitalize;
@@ -144,11 +145,11 @@
   color: #2b293e;
 }
 
-.body .login .pad .sup a {
+.cont .login .pad .sup a {
   position: relative;
 }
 
-.body .login .pad .sup a button {
+.cont .login .pad .sup a button {
   margin-left: 30%;
   position: relative;
   width: 40%;

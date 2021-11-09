@@ -2,6 +2,7 @@ import {Link} from 'react-router-dom'
 import {useState} from "react"
 import "./scss/login.css"
 const axios = require("axios")
+axios.defaults.withCredentials = true
 
 function Login() {
 const [state,setState] = useState({
@@ -12,7 +13,7 @@ const [error, setError] = useState(false)
 const [errorMessage, setErrorMessage] = useState("")
 
 
-    function handleSubmit(e){
+ async   function handleSubmit(e){
 e.preventDefault()
     let {email} = state
     let {password} = state
@@ -26,12 +27,16 @@ e.preventDefault()
         email,
         password
     }
-    axios.post("http://127.0.0.1:3400/signin",loginuser)
-    .then(res =>{
-        if(res.status === 200){
-            let {messaage}=res.data
-          let id =  messaage[0]._id
-          localStorage.setItem("id", JSON.stringify(id))
+    
+
+
+        axios.post("http://127.0.0.1:3400/signin",loginuser,    {
+        headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'
+    } }    )
+         .then(res =>{
+           if(res.status === 200){ 
+                 console.log(res.data)
+  
             setState({
     email:"",
     password:""
@@ -60,11 +65,13 @@ e.preventDefault()
      
     })
     .catch(err=>{console.log(err)})
-       
+
 }
+       
+
     return (
       
-       <div className="body">
+       <div className="cont">
     <div className="login"> 
      <div className="head">
           <Link to="/"> <h1>The blog</h1></Link>

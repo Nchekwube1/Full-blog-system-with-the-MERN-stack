@@ -4,7 +4,9 @@ const schema = require("../Model/model")
 const bcrypt = require("bcrypt")
 const Router = express.Router()
 const cors = require("cors")
-express().use(cors())
+// const app = express()
+// app.use(cors())
+// app.use(cors({ credentials: true, origin: "http://localhost:3000/signup" }))
 
 
 Router.post("/signup", async (req, res) => {

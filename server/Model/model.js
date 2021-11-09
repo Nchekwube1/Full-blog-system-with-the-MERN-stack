@@ -18,7 +18,11 @@ const schema = new mongoose.Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    posts:{
+        type:Array,
     }
+
 })
 
 module.exports = mongoose.model("profile", schema)

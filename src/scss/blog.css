@@ -1,11 +1,253 @@
-body {
-  background-color: #2b293e;
+.bhead {
+  position: fixed;
+  width: 100%;
+  height: 7.5rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 200;
+  padding: 1rem;
 }
 
-.head {
+.bhead .tit {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #2b293e;
+}
+
+.bhead .tit h1 {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  font-family: "Rubik-Light";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.bhead .tabs {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Poppins-Light";
+}
+
+.bhead .tabs button {
+  position: relative;
+  height: 3.4rem;
+  margin-right: 0.4rem;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-family: "Poppins-Light";
+  padding: 0.4rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.bhead .tabs button:hover {
+  border-bottom: 2px solid #2b293e;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.bhead .tabs button:first-child {
+  border-bottom: 2px solid #2b293e;
+}
+
+.bhead .tabs button:active {
+  border-bottom: 2px solid #2b293e;
+}
+
+.bhead .log {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.bhead .log button {
+  position: relative;
+  height: 3.8rem;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-family: "Rubik-Light";
+  padding: 0.4rem;
+  border: none;
+  background-color: #fa1919;
+  width: 9rem;
+  color: #fff;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.bhead .log button:hover {
+  color: #fa1919;
+  background-color: #fff;
+}
+
+.body {
   position: relative;
   width: 100%;
-  height: 7rem;
-  background-color: #fff;
+  height: 100vh;
+  padding: 2rem;
+  background-color: rgba(43, 41, 62, 0.1);
+  padding-top: 10rem;
+}
+
+.body .inner {
+  position: inherit;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.body .inner .each {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  margin-right: 0.4rem;
+  border-bottom: 1px solid rgba(43, 41, 62, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.body .inner .each .img {
+  position: relative;
+  width: 100%;
+  height: 70%;
+}
+
+.body .inner .each .img img {
+  position: relative;
+  width: 100%;
+}
+
+.body .inner .each .text {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body .inner .each .text .header {
+  position: relative;
+  width: 100%;
+  height: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body .inner .each .text .header h1 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-family: "Rubik-Light";
+  color: #2b293e;
+}
+
+.body .inner .each .text .para {
+  position: relative;
+  width: 100%;
+  height: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.body .inner .each .text .para h1 {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  font-family: "Poppins-Light";
+}
+
+.body .inner .each .text .para button {
+  position: relative;
+  padding: 0.4rem;
 }
 /*# sourceMappingURL=blog.css.map */
