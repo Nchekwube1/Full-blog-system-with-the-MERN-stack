@@ -10,7 +10,19 @@ const newsEndpoint = `https://newsapi.org/v2/everything?q=Football&from=2021-11-
 router.get("/user", auth, async (req, res) => {
     try {
         const user = await model.findById(req.user).select("-password")
-        res.json(user)
+        if (user) {
+            const news = await fetch(newsEndpoint)
+            const corr = news.json()
+
+            res.json({
+                news,
+                corr
+            })
+        }
+        else {
+            res.status(401).json({ msg: "invalid user id" })
+        }
+        // res.json(user)
     } catch (err) {
         res.status(500).send("Server Error")
     }
