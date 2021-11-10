@@ -2,7 +2,6 @@ import "./scss/blog.css"
 import img from "./imgs/retrosupply-jLwVAUtLOAQ-unsplash.jpg"
 function Blog() {
     return (
-        // <div className="page">
         <>
             <header className="bhead">
              <div className="name">
@@ -25,7 +24,7 @@ function Blog() {
                      </div>
                      <div className="text">
                          <div className="header"><h1>typewriting? going back to the past</h1></div>
-                         <div className="para"><h1>typewriters are a great tool for writing and they dont require electricity supply to run so...</h1>  <button>read more</button></div>
+                         <div className="para"><a href="/"> typewriters are a great tool for writing and they dont require electricity supply to run so Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veritatis quod ea, excepturi ab quasi dicta facilis expedita natus doloremque, harum quos, sit vero assumenda quaerat! Aut nesciunt dolorum officia.</a> </div>
                      </div>
                 </div>
                </div>

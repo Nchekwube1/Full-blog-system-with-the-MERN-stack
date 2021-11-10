@@ -16,7 +16,7 @@
   padding: 1rem;
 }
 
-.bhead .tit {
+.bhead .name {
   position: relative;
   width: 20%;
   height: 100%;
@@ -32,8 +32,8 @@
   color: #2b293e;
 }
 
-.bhead .tit h1 {
-  font-size: 3.2rem;
+.bhead .name h1 {
+  font-size: 2.8rem;
   text-transform: uppercase;
   font-family: "Rubik-Light";
   display: inline-block;
@@ -95,7 +95,7 @@
   border-bottom: 2px solid #2b293e;
 }
 
-.bhead .tabs button:active {
+.bhead .tabs button.active {
   border-bottom: 2px solid #2b293e;
 }
 
@@ -147,18 +147,18 @@
   position: inherit;
   width: 100%;
   height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .body .inner .each {
   position: relative;
-  width: 100%;
+  width: 30%;
   height: 50vh;
-  margin-right: 0.4rem;
+  margin: 3rem 1.5%;
   border-bottom: 1px solid rgba(43, 41, 62, 0.6);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,11 +173,20 @@
   position: relative;
   width: 100%;
   height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .body .inner .each .img img {
   position: relative;
-  width: 100%;
+  height: 100%;
 }
 
 .body .inner .each .text {
@@ -202,16 +211,22 @@
 .body .inner .each .text .header {
   position: relative;
   width: 100%;
-  height: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .body .inner .each .text .header h1 {
+  position: relative;
+  padding: 0.4rem;
+  width: 100%;
+  text-align: center;
   font-size: 1.6rem;
   text-transform: uppercase;
   font-family: "Rubik-Light";
@@ -222,28 +237,21 @@
   position: relative;
   width: 100%;
   height: 75%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 0.6rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-.body .inner .each .text .para h1 {
+.body .inner .each .text .para a {
   font-size: 1.4rem;
   text-transform: capitalize;
   font-family: "Poppins-Light";
+  text-decoration: none;
+  cursor: pointer;
+  color: #2b293e;
 }
 
 .body .inner .each .text .para button {

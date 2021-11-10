@@ -4,9 +4,9 @@ const bcrypt = require("bcrypt")
 const app = express()
 const auth = require("../middlewares/auth")
 require("dotenv").config()
+const jwt = require('jsonwebtoken')
 const parser = require("cookie-parser")
 const Router = express.Router()
-const jwt = require('jsonwebtoken')
 
 app.use(parser())
 

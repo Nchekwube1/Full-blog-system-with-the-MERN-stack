@@ -19,8 +19,11 @@ const schema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    posts:{
-        type:Array,
+    posts: {
+        type: [String],
+    },
+    bio: {
+        type: String
     }
 
 })
