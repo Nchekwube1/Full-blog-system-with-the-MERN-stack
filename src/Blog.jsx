@@ -33,7 +33,21 @@ function Blog() {
 
             <div className="body">
                <div className="inner">
-                      <div className="each">
+
+                  { posts.length === 0? <h1>Loading ...</h1> :
+                   posts.map(post=>{
+                       return  <div className="each" key={post?.title}>
+                     <div className="img">
+                          <img src={post?.urlToImage} alt="img" />
+                     </div>
+                     <div className="text">
+                         <div className="header"><a href={post?.url}>{post?.title}</a></div>
+                         <div className="para"><a href={post?.url}> {post?.description}</a> </div>
+                     </div>
+                </div> 
+                   })
+                  }
+                      {/* <div className="each">
                      <div className="img">
                           <img src={img} alt="img" />
                      </div>
@@ -41,7 +55,7 @@ function Blog() {
                          <div className="header"><h1>typewriting? going back to the past</h1></div>
                          <div className="para"><a href="/"> typewriters are a great tool for writing and they dont require electricity supply to run so Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veritatis quod ea, excepturi ab quasi dicta facilis expedita natus doloremque, harum quos, sit vero assumenda quaerat! Aut nesciunt dolorum officia.</a> </div>
                      </div>
-                </div>
+                </div> */}
                </div>
             </div>
             </>
