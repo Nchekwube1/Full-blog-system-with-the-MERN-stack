@@ -6,7 +6,7 @@ require("dotenv").config()
 const apiKey = process.env.apiKey
 const model = require("../Model/model")
 // const newsEndpoint = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`
-const newsEndpoint = `https://newsapi.org/v2/everything?q=Football&from=2021-11-10&sortBy=popularity&apiKey=${apiKey}`
+const newsEndpoint = `https://newsapi.org/v2/everything?q="Programming"&pageSize=99&sortBy=popularity&apiKey=${apiKey}`
 
 router.get("/user", auth, async (req, res) => {
     try {

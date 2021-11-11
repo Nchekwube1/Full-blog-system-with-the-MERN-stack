@@ -7,15 +7,30 @@ function Blog() {
     const[user,setUser]= useState({})
     useEffect(()=>{
        const token =  JSON.parse(localStorage.getItem("blogToken"))
-       console.log(token.token)
-      axios.get("http://localhost:3400/user",{
+    //    console.log(token.token)
+       if(token){
+             axios.get("http://localhost:3400/user",{
           headers:{"auth-token":`${token.token}`}
       }).then(res=>{
-          setUser(res.data.user)
+           if(res.status === 200){
+                   setUser(res.data.user)
           setPosts(res.data.articles)
           console.log(res.data.articles)
+           }else if(res.status ===401){
+          window.location.replace("/signin")
+           }
         })
+       }
+       else{
+          window.location.replace("/signin")
+       }
     },[])
+
+    const logout =()=>{
+        localStorage.removeItem("blogToken")
+          window.location.replace("/signin")
+
+    }
     return (
         <>
             <header className="bhead">
@@ -27,7 +42,11 @@ function Blog() {
                  <button>explore</button>
              </div>
              <div className="log">
-                 <button>logout</button>
+                 <div className="pro">
+                 <h4>{user?.username}</h4>
+
+                 </div>
+                 <button onClick={logout}>logout</button>
              </div>
             </header>
 
@@ -37,9 +56,9 @@ function Blog() {
                   { posts.length === 0? <h1>Loading ...</h1> :
                    posts.map(post=>{
                        return  <div className="each" key={post?.title}>
-                     <div className="img">
+                     <a href={post?.url} className="img">
                           <img src={post?.urlToImage} alt="img" />
-                     </div>
+                     </a>
                      <div className="text">
                          <div className="header"><a href={post?.url}>{post?.title}</a></div>
                          <div className="para"><a href={post?.url}> {post?.description}</a> </div>

@@ -35,8 +35,9 @@ e.preventDefault()
     } }    )
          .then(res =>{
            if(res.status === 200){ 
-                 console.log(res.data)
                  localStorage.setItem("blogToken",JSON.stringify(res.data))
+          window.location.replace("/blog")
+
   
             setState({
     email:"",

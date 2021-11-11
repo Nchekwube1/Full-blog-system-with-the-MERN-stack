@@ -35,7 +35,7 @@ Router.post("/signin", async (req, res) => {
                             const { _id, username, date } = user
 
                             jwt.sign({ id: _id }, jwtSecret, {
-                                expiresIn: 360000
+                                expiresIn: 300
                             }, (err, token) => {
                                 if (err) {
                                     throw err
