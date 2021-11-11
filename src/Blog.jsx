@@ -1,6 +1,21 @@
 import "./scss/blog.css"
+import {useEffect,useState} from "react"
+import axios from "axios"
 import img from "./imgs/retrosupply-jLwVAUtLOAQ-unsplash.jpg"
 function Blog() {
+    const [posts,setPosts] = useState([])
+    const[user,setUser]= useState({})
+    useEffect(()=>{
+       const token =  JSON.parse(localStorage.getItem("blogToken"))
+       console.log(token.token)
+      axios.get("http://localhost:3400/user",{
+          headers:{"auth-token":`${token.token}`}
+      }).then(res=>{
+          setUser(res.data.user)
+          setPosts(res.data.articles)
+          console.log(res.data.articles)
+        })
+    },[])
     return (
         <>
             <header className="bhead">
